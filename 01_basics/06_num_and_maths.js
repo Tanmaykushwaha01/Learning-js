@@ -13,7 +13,7 @@ console.log(otherNum.toPrecision(2));
 const hundreads = 10000000
 console.log(hundreads.toLocaleString('en-In'));
 
-------------------------------------------- maths -------------------------------------------
+// ------------------------------------------- maths -------------------------------------------
 
 console.log(Math);
 console.log(Math.abs(-5)); // negative val to positive //5
