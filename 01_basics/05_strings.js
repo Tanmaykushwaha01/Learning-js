@@ -17,7 +17,8 @@ const fullName = new String('Tanmay Kushwaha')
 // const newName = fullName.substring(0, 6);
 // console.log(newName);
 
-// const gameName = fullName.slice(0, 7);
+// const gameName = fullName.slice(0, 7); 
+// // const gameName = fullName.slice(-3, 7); //A negative number selects from the end of the string.
 // console.log(gameName);
 
 // const trimName = '       tanmay     '
