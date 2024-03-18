@@ -70,3 +70,35 @@ const user = [
 // console.log(user[2].hasOwnProperty('id')); // to check any objects has particular value => boolean
 
 
+// objects destructure
+
+const course = {
+    courseName: 'Chai aur javascript',
+    price: 9999,
+    courseInstructor: 'Hitesh Chaudhary'
+}
+
+// console.log(course.courseInstructor); 
+//if you want write it 100 times but writing everytime course.courseInstructor is a lengthy task so we destructure it to make it concise
+
+//Object destructuring is a useful JavaScript feature to extract properties from objects and bind them to variables.
+// Even better, object destructuring can extract multiple properties in a single statement, can access properties from nested objects, and can set a default value if the property doesn't exist
+
+const {courseInstructor : instructor} = course;
+
+// console.log(instructor);
+
+// json api format
+
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
+
