@@ -37,3 +37,27 @@ if(true){
     // console.log(website); // wont run because website variable has bloc scope and cant accessed outside that
 }
 
+//variable cant be accessed outside the its scope in nested function called closure. like above.
+//Global variables can be made local (private) with closures.
+//A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
+// In other words, a closure gives you access to an outer function's scope from an inner function
+
+
+// ---------------------------------------------- INTERESTING ----------------------------------------------
+
+
+
+addOne(5)
+
+function addOne(num){
+    return num + 1
+}
+
+
+
+addTwo(5) //  ReferenceError: Cannot access 'addTwo' before initialization.
+
+const addTwo = function(num){
+    return num +2
+}
+// wont run because we not only declared the function but alse stored in a variable. (hoisting)
