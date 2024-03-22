@@ -13,11 +13,12 @@
 // if we dont do console.log then it will only return but dont print the output.
 
 
-// function addTwoNum(number1, number2){
-//     console.log(number1 +number2);       // 38 
-// }
-// console.log(addTwoNum(34, 4)); => undefined
-
+function addTwoNum(number1, number2){
+    console.log(number1 +number2);       // 38 
+}
+const result = addTwoNum(34, 4);  //  38
+console.log(result);   // undefined 
+// because the function is only printing the result not returing a value that get stored on variable and give output on console.log
 
 
 
