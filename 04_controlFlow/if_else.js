@@ -1,3 +1,6 @@
+// Control flow
+// Not every time we want all code to run sometime we want a specific part of code run in specific condition
+
 // if 
 // <, >, <=, >=, ==, !=, ===, !==
 
