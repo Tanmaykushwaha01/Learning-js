@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+    <style>
+        .bg-color {
+            color: #fff;
+            background-color: #212121;
+        }
+    </style>
+</head>
+
+<body class="bg-color">
+    <div>
+        <h1 id="title" class="heading">HTML DOM <span style="display: none;">this is hidden</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <input type="password" name="tanmay" id="pass">
+
+
+
+        <!-- document.getElementById('title').innerHTML = '<h5>first title</h5>' => changed the heading by id -->
+        <!-- document.getElementById('title').className => while calling class we use className because BTS decument understand by className -->
+        <!-- document.getElementById('title').getAttribute('id') => call through any attribute call through any attribute like id, class, style etc -->
+        <!-- document.getElementById('title').setAttribute('id', 'newID') => change the attribute value even showing undefined -->
+
+        <!-- styling =>        const titleID = document.getElementById('title')
+        titleID.style.backgroundColor = 'red'
+        titleID.style.padding = '20px'
+        titleID.style.borderRadius = '15px' -->
+
+        <!-- how to get content from the attribute
+        titleID.innerText => 'HTML DOM'
+        titleID.textContent => 'HTML DOM this is hidden'
+        titleID.innerHTML => 'HTML DOM <span style="display: none;">this is hidden</span>' -->
+
+        <!-- document.querySelector('h2') => <h2>​Lorem ipsum dolor sit amet.​</h2>​
+        document.querySelectorAll('h2') => NodeList(3) [h2, h2, h2
+
+        we can use css selector to call id, class
+        document.querySelector('#title') => <h1 id=​"title" class=​"heading">​…​</h1>​
+        document.querySelector('.heading') => <h1 id=​"title" class=​"heading">​…​</h1>​ 
+        document.querySelector('input[type="password"]')  ​ => <input type=​"password" name=​"tanmay" id=​"pass"> -->
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+        <!-- document.querySelector('ul') => <ul style=​"background-color:​ red;​">​…​</ul>​
+        const myul = document.querySelector('ul')
+        myul => <ul style=​"background-color:​ red;​">​…​</ul>​
+        myul.style.backgroundColor = 'red'
+        const turnGreen = myul.querySelector('li')
+        turnGreen.style.backgroundColor = 'Green'
+        turnGreen.innerText = 'changed to zero' => 'changed to zero' => for changing content of li
+
+        document.querySelectorAll('li') => NodeList(4) [li, li, li, li]
+        const tempList = document.querySelectorAll('li')
+        tempList[0].style.color = 'green' => 'green'
+
+        const myh1 = document.querySelectorAll('h1') => undefined
+        myh1[0].style.backgroundColor = 'green' => 'green'
+        Even if there is only one child while using querySelectorAll we have to give the index value otherwise it will show error.
+         -->
+
+        <!-- const tempList = document.querySelectorAll('li') => undefined
+        tempList => NodeList(4) [li, li, li, li]
+        tempList.forEach( function (l) {
+        l.style.backgroundColor = 'yellow'
+        }) -->
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, totam.
+        </p>
+    </div>
+</body>
+
+<script></script>
+
+</html>
