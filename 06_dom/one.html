@@ -75,6 +75,25 @@
         l.style.backgroundColor = 'yellow'
         }) -->
 
+        <!-- 
+        document.getElementsByClassName('list-item') => HTMLCollection(4)
+        const classList = document.getElementsByClassName('list-item') => undefined
+        classList => HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+        Array.from(classList)
+        const convertedArray = Array.from(classList) => undefined
+        convertedArray.forEach( function (item) {
+        item.style.backgroundColor = 'orange'
+        }) => undefined
+        
+        HTMLCollection has no for each, NodeList has no map, array has has all methods. thats why all are different.
+        -->
+
+        <!-- 
+        const t = document.querySelectorAll('h1') => undefined
+        t => NodeList [h1#firstHeading.firstHeading.mw-first-heading]
+        t[0].innerText => 'JavaScript'
+        t.forEach( function (t2) {t2.innerText = 'bhadwa'})    => undefined
+        -->
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, totam.
         </p>
     </div>

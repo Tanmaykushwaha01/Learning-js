@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>c</li>
+        <li>java</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName) {
+        const li = document.createElement('li')
+        li.innerText = langName;
+        document.querySelector('.language').appendChild(li)
+        //2nd way 
+        //const li2 = document.createTextNode(`${langName}`)
+        // li.appendChild(li2)
+        // document.querySelector('.language').appendChild(li)
+
+    }
+    addLang('js');
+    addLang('react');
+    //1st way of doing less optimize
+
+    function addOptimizedLang(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    } 
+    // use append child rather than innerText because innerText traverse whole tree and not optimized in big project
+    addOptimizedLang('next js')
+    addOptimizedLang('node js')
+
+    // Edit 
+    const secondText = document.querySelector('li:nth-child(3)');
+    // secondText.innerHTML = 'golang'  // => another way to edit
+    const newLi = document.createElement('li')
+    newLi.textContent = 'golang'
+    secondText.replaceWith(newLi)
+
+    //another way to edit
+    const firstText = document.querySelector('li:first-child');
+    firstText.outerHTML = '<li>Typescript</li>'
+
+    //remove
+    const lastText  = document.querySelector('li:last-child')
+    lastText.remove();
+</script>
+</html>
