@@ -68,7 +68,7 @@ function displayMessage(message) {
 }
 
 function endGame() {
-  userInput = '';
+  userInput.value = '';
   userInput.setAttribute('disabled', '');
   playGame = false;
   p.classList.add('button');

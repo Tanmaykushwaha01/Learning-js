@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google" target="_blank">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked')
+    // }             // dont give propgation
+
+    // attachEvent() => used previously in the of internet explorer 
+    //  jQuery =>  on 
+
+            // document.querySelector('#owl').addEventListener('click', function (e) {
+            //     alert('owl clicked')
+            //     console.log(e.currentTarget); // show the the target element from where event occur
+            //     console.log(e.target); // show the the target element from where event occur
+            //     console.log(e.type); // click
+            //     console.log(e.clientX, e.clientY); // 191 520
+            // }, false)
+    // (e) => it is event object. This event object has properties that describe that interaction. store backgrounf info like type of event, from where event occur etc
+
+    // event propagation => event bubbling and event capturing  
+    // event bubbling
+            // document.querySelector('#images').addEventListener('click', function (e) {
+            //     console.log('ul clicked')
+            // }, false);
+
+            // document.querySelector('#prayer').addEventListener('click', function (e) {
+            //     console.log('prayer clicked');
+            //     e.stopPropagation()  // will not bubble to top, because might be some other script on the top
+            // }, false)
+    // prayer clicked
+    // ul clicked
+
+    // event capturing 
+            // document.querySelector('#images').addEventListener('click', function (e) {
+            //     console.log('ul clicked')
+            // }, true);
+
+            // document.querySelector('#prayer').addEventListener('click', function (e) {
+            //     console.log('prayer clicked')
+            // }, true)
+    // ul clicked
+    // prayer clicked
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //   e.preventDefault();  
+    // }, false)
+
+    document.getElementById('images').addEventListener('click', function (e) {
+        // console.log(e.target.parentNode);
+        // let removeIt = e.target.parentNode;
+        //  removeIt.remove()
+        // removeIt.parentNode.removeChild(removeIt) // second way of doing it
+                // the problem is when you click on li, it remve all the image in one click 
+
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            console.log(e.target.id);
+            console.log(e.target.tagName); 
+        }
+       
+    })
+
+</script>
+
+</html>
